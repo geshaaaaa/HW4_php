@@ -1,9 +1,10 @@
 <?php
-echo "Wirte number to choose colour at IF function". PHP_EOL;
+echo "Write number to choose colour at IF function". PHP_EOL;
 $number = fgets(STDIN) ;
 coloursIf ($number);
   function coloursIf ($value)
   {
+      $value = (int)$value;
       if ($value == 1)
       {
             echo "green". PHP_EOL;
@@ -34,12 +35,13 @@ coloursIf ($number);
       }
   }
 
-echo "Wirte number to choose colour at SWITCH function". PHP_EOL;
+echo "Write number to choose colour at SWITCH function". PHP_EOL;
 $number = fgets(STDIN) ;
-coloursIf ($number);
+coloursSwitch($number);
 
   function coloursSwitch($value)
   {
+      $value = (int)$value;
       switch ($value)  {
           case 1:
               echo "green". PHP_EOL;
@@ -65,11 +67,12 @@ coloursIf ($number);
 
 
   }
-echo "Wirte number to choose colour at IF function". PHP_EOL;
+echo "Write number to choose colour at MATCH function". PHP_EOL;
 $number = fgets(STDIN) ;
-coloursIf ($number);
+coloursMatch ($number);
   function coloursMatch($value)
   {
+      $value = (int)$value;
      $returnValue =  match  ($value){
       1 => "green" . PHP_EOL,
       2 => "red". PHP_EOL,
